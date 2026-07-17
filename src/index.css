@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App-level root styles (merged from App.css) */
+.App {
+  min-height: 100vh;
+  background: #F6F5F2;
+  color: #1A2520;
+}
+
+@layer base {
+  :root {
+    /* Warm earthy minimal palette */
+    --background: 42 22% 96%;         /* #F6F5F2 */
+    --foreground: 150 15% 12%;        /* #1A2520 */
+    --card: 42 22% 96%;
+    --card-foreground: 150 15% 12%;
+    --popover: 42 22% 96%;
+    --popover-foreground: 150 15% 12%;
+    --primary: 143 33% 18%;           /* #1E3B2C deep forest green */
+    --primary-foreground: 42 22% 96%;
+    --secondary: 42 15% 89%;          /* #EAE7DE surface */
+    --secondary-foreground: 150 15% 12%;
+    --muted: 42 15% 89%;
+    --muted-foreground: 148 8% 38%;   /* #5A6A61 */
+    --accent: 14 51% 53%;             /* #C46549 terracotta */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 42 20% 80%;             /* #D5D1C4 */
+    --input: 42 20% 80%;
+    --ring: 14 51% 53%;
+    --radius: 2px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: initial;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, .font-serif {
+    font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
+    font-feature-settings: "liga", "dlig";
+  }
+  ::selection {
+    background: #1E3B2C;
+    color: #F6F5F2;
+  }
+}
+
+/* Subtle grain overlay */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Kinetic mask reveal helper */
+.mask-line {
+  overflow: hidden;
+  display: block;
+}
+
+/* Custom marquee gap and font */
+.marquee-track {
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Focus rings */
+:focus-visible {
+  outline: 2px solid #C46549;
+  outline-offset: 3px;
+}
+
+/* Sharp inputs override */
+.sharp-input {
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #D5D1C4 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  transition: border-color 0.3s ease;
+}
+.sharp-input:focus {
+  border-bottom-color: #1E3B2C !important;
+  box-shadow: none !important;
+}
+
+/* Cross-hatched divider */
+.hatched {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #1E3B2C 0,
+    #1E3B2C 1px,
+    transparent 1px,
+    transparent 6px
+  );
+}
+
+/* Floating CTAs pulse */
+@keyframes soft-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(196, 101, 73, 0.5); }
+  50% { box-shadow: 0 0 0 14px rgba(196, 101, 73, 0); }
+}
+.pulse-ring {
+  animation: soft-pulse 2.4s infinite;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom CSS Marquee */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee-scroll {
+  animation: marquee-scroll 35s linear infinite;
+}
+.animate-marquee-scroll-reverse {
+  animation: marquee-scroll 25s linear infinite reverse;
+}
+.pause-hover:hover {
+  animation-play-state: paused;
+}
