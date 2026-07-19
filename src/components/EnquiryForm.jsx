@@ -63,24 +63,24 @@ export default function EnquiryForm({ defaultPackage = "" }) {
   return (
     <section
       id="enquire"
-      className="relative bg-[#F6F5F2] py-12 md:py-20"
+      className="relative bg-[#F6F5F2] py-10 sm:py-12 md:py-20"
       data-testid="enquiry-section"
     >
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-12 gap-8 md:gap-12">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 md:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="col-span-12 md:col-span-5"
+          className="md:col-span-5"
         >
-          <p className="text-[10px] uppercase tracking-[0.32em] text-[#5A6A61] mb-3">
+          <p className="text-[10px] uppercase tracking-[0.32em] text-[#5A6A61] mb-2 sm:mb-3">
             Plan your visit
           </p>
-          <h2 className="font-serif text-4xl md:text-6xl tracking-tighter leading-[1] text-[#1A2520]">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-6xl tracking-tighter leading-[1] text-[#1A2520]">
             Tell us a little. <span className="italic text-[#1E3B2C]">We'll do the rest.</span>
           </h2>
-          <p className="mt-6 text-sm md:text-base text-[#1A2520]/80 leading-relaxed max-w-sm">
+          <p className="mt-4 sm:mt-6 text-sm md:text-base text-[#1A2520]/80 leading-relaxed max-w-sm">
             Fill this quiet little form or reach us on WhatsApp. Our host will
             get back to you personally with dates, rooms and menu options.
           </p>
@@ -92,7 +92,7 @@ export default function EnquiryForm({ defaultPackage = "" }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="col-span-12 md:col-span-7 grid grid-cols-2 gap-x-8 gap-y-10"
+          className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-6 sm:gap-y-10"
           data-testid="enquiry-form"
         >
           <Field
@@ -124,7 +124,7 @@ export default function EnquiryForm({ defaultPackage = "" }) {
             onChange={update("visit_date")}
             testid="enquiry-input-date"
           />
-          <div className="col-span-2 sm:col-span-1">
+          <div className="sm:col-span-1">
             <label className="block text-[10px] uppercase tracking-[0.28em] text-[#5A6A61] mb-2">
               Package
             </label>
@@ -150,7 +150,7 @@ export default function EnquiryForm({ defaultPackage = "" }) {
             placeholder="e.g. 12"
             testid="enquiry-input-guests"
           />
-          <div className="col-span-2">
+          <div className="sm:col-span-2">
             <label className="block text-[10px] uppercase tracking-[0.28em] text-[#5A6A61] mb-2">
               Anything else?
             </label>
@@ -163,16 +163,16 @@ export default function EnquiryForm({ defaultPackage = "" }) {
               className="w-full bg-transparent border-b border-[#D5D1C4] py-2 text-sm text-[#1A2520] focus:outline-none focus:border-[#1E3B2C] transition-colors resize-none"
             />
           </div>
-          <div className="col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
+          <div className="sm:col-span-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 sm:pt-4">
             <Button
               type="submit"
               disabled={submitting}
               data-testid="enquiry-submit-button"
-              className="rounded-none bg-[#C46549] hover:bg-[#1E3B2C] text-white px-8 py-6 text-xs uppercase tracking-[0.28em] transition-colors duration-500 disabled:opacity-60"
+              className="rounded-none bg-[#C46549] hover:bg-[#1E3B2C] text-white px-8 py-5 sm:py-6 text-xs uppercase tracking-[0.28em] transition-colors duration-500 disabled:opacity-60 w-full sm:w-auto"
             >
               {submitting ? "Sending…" : "Send enquiry"}
             </Button>
-            <span className="text-[10px] uppercase tracking-[0.28em] text-[#5A6A61]">
+            <span className="text-[10px] uppercase tracking-[0.28em] text-[#5A6A61] text-center sm:text-left">
               We reply within 12 hours
             </span>
           </div>
@@ -184,7 +184,7 @@ export default function EnquiryForm({ defaultPackage = "" }) {
 
 function Field({ label, testid, ...rest }) {
   return (
-    <div className="col-span-2 sm:col-span-1">
+    <div className="sm:col-span-1">
       <label className="block text-[10px] uppercase tracking-[0.28em] text-[#5A6A61] mb-2">
         {label}
       </label>

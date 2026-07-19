@@ -19,12 +19,12 @@ export default function EnquirePage() {
   return (
     <main data-testid="enquire-page">
       <Navbar />
-      <div className="pt-40 md:pt-48 pb-6">
-        <div className="mx-auto max-w-[1440px] px-6 md:px-10">
-          <p className="text-[10px] uppercase tracking-[0.32em] text-[#5A6A61] mb-3">
+      <div className="pt-28 sm:pt-40 md:pt-48 pb-4 sm:pb-6">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-10">
+          <p className="text-[10px] uppercase tracking-[0.32em] text-[#5A6A61] mb-2 sm:mb-3">
             We'd love to host you
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl tracking-tighter leading-[0.95] text-[#1A2520] max-w-4xl">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl tracking-tighter leading-[0.95] text-[#1A2520] max-w-4xl">
             Send us a note. <span className="italic text-[#1E3B2C]">We'll write back.</span>
           </h1>
         </div>

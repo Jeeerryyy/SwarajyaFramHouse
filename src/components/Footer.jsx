@@ -7,29 +7,29 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative bg-[#1E3B2C] text-[#F6F5F2] pt-24 md:pt-32 pb-10"
+      className="relative bg-[#1E3B2C] text-[#F6F5F2] pt-16 sm:pt-24 md:pt-32 pb-8 sm:pb-10"
       data-testid="site-footer"
     >
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10">
-        <div className="grid grid-cols-12 gap-8">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 md:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="col-span-12 md:col-span-7"
+            className="md:col-span-7"
           >
-            <p className="text-[10px] uppercase tracking-[0.32em] text-[#C46549] mb-4">
+            <p className="text-[10px] uppercase tracking-[0.32em] text-[#C46549] mb-3 sm:mb-4">
               Ready to visit
             </p>
-            <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.95] text-[#F6F5F2]">
+            <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.95] text-[#F6F5F2]">
               Come as guests, <span className="italic">leave as family</span>.
             </h2>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <a
                 href={`tel:${BRAND.phone}`}
                 data-testid="footer-call-cta"
-                className="inline-flex items-center gap-3 bg-[#C46549] text-white px-6 py-4 text-xs uppercase tracking-[0.28em] hover:bg-[#F6F5F2] hover:text-[#1E3B2C] transition-colors duration-500"
+                className="inline-flex items-center justify-center sm:justify-start gap-3 bg-[#C46549] text-white px-5 sm:px-6 py-3.5 sm:py-4 text-xs uppercase tracking-[0.28em] hover:bg-[#F6F5F2] hover:text-[#1E3B2C] transition-colors duration-500"
               >
                 <Phone strokeWidth={1.5} className="w-4 h-4" />
                 {BRAND.phoneDisplay}
@@ -39,7 +39,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="footer-whatsapp-cta"
-                className="inline-flex items-center gap-3 border border-[#F6F5F2]/40 text-[#F6F5F2] px-6 py-4 text-xs uppercase tracking-[0.28em] hover:bg-[#F6F5F2] hover:text-[#1E3B2C] transition-colors duration-500"
+                className="inline-flex items-center justify-center sm:justify-start gap-3 border border-[#F6F5F2]/40 text-[#F6F5F2] px-5 sm:px-6 py-3.5 sm:py-4 text-xs uppercase tracking-[0.28em] hover:bg-[#F6F5F2] hover:text-[#1E3B2C] transition-colors duration-500"
               >
                 <MessageCircle strokeWidth={1.5} className="w-4 h-4" />
                 WhatsApp us
@@ -52,13 +52,13 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="col-span-12 md:col-span-4 md:col-start-9 space-y-8"
+            className="md:col-span-4 md:col-start-9 space-y-6 sm:space-y-8"
           >
             <div>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#F6F5F2]/50 mb-3">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#F6F5F2]/50 mb-2 sm:mb-3">
                 Address
               </p>
-              <p className="text-sm md:text-base text-[#F6F5F2]/90 leading-relaxed">
+              <p className="text-sm md:text-base text-[#F6F5F2]/90 leading-relaxed break-words">
                 {BRAND.address}
               </p>
               <a
@@ -74,7 +74,7 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#F6F5F2]/50 mb-3">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#F6F5F2]/50 mb-2 sm:mb-3">
                 Hours
               </p>
               <p className="text-sm text-[#F6F5F2]/90 leading-relaxed">
@@ -85,9 +85,9 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="hatched h-[6px] w-full opacity-30 mt-20" />
+        <div className="hatched h-[6px] w-full opacity-30 mt-12 sm:mt-20" />
 
-        <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[10px] uppercase tracking-[0.28em] text-[#F6F5F2]/50">
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-[#F6F5F2]/50">
           <span>© {new Date().getFullYear()} Swarajya Farm House — Ghera Sinhagad, Pune</span>
           <span>{BRAND.nameDevanagari}</span>
         </div>
