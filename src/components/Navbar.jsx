@@ -75,6 +75,13 @@ export default function Navbar() {
             Amenities
           </a>
           <a
+            href="#gallery"
+            className="text-xs uppercase tracking-[0.22em] text-[#1A2520] hover:text-[#C46549] transition-colors duration-300"
+            data-testid="nav-gallery"
+          >
+            Gallery
+          </a>
+          <a
             href="#contact"
             className="text-xs uppercase tracking-[0.22em] text-[#1A2520] hover:text-[#C46549] transition-colors duration-300"
             data-testid="nav-contact"
@@ -151,7 +158,20 @@ export default function Navbar() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.42, duration: 0.4 }}
+                transition={{ delay: 0.38, duration: 0.4 }}
+              >
+                <a
+                  href="#gallery"
+                  className="block font-serif text-4xl sm:text-5xl tracking-tight text-[#1A2520] hover:text-[#C46549] transition-colors py-2"
+                  onClick={() => setOpen(false)}
+                >
+                  Gallery
+                </a>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.46, duration: 0.4 }}
               >
                 <a
                   href="#contact"

@@ -7,6 +7,8 @@ import HomePage from "@/pages/HomePage";
 import PackagesPage from "@/pages/PackagesPage";
 import EnquirePage from "@/pages/EnquirePage";
 import AdminEnquiriesPage from "@/pages/AdminEnquiriesPage";
+import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage";
+import TermsPage from "@/pages/TermsPage";
 import FloatingCTAs from "@/components/FloatingCTAs";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -37,6 +39,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/enquire" element={<EnquirePage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-and-conditions" element={<TermsPage />} />
+          <Route path="/terms" element={<TermsPage />} />
           <Route path="/admin/enquiries" element={<AdminEnquiriesPage />} />
         </Routes>
         <FloatingCTAs />

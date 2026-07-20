@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MapPin, Phone, MessageCircle, ExternalLink } from "lucide-react";
 import { BRAND } from "@/lib/data";
@@ -82,6 +83,20 @@ export default function Footer() {
                 Stays · 12 PM check-in, 11 AM check-out
               </p>
             </div>
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.3em] text-[#F6F5F2]/50 mb-2 sm:mb-3">
+                Legal
+              </p>
+              <div className="flex flex-wrap gap-4 text-xs tracking-wider text-[#F6F5F2]/80">
+                <Link to="/privacy-policy" className="hover:text-[#C46549] transition-colors">
+                  Privacy Policy
+                </Link>
+                <span className="text-[#F6F5F2]/35">·</span>
+                <Link to="/terms-and-conditions" className="hover:text-[#C46549] transition-colors">
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
           </motion.div>
         </div>
 
@@ -89,6 +104,7 @@ export default function Footer() {
 
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-[#F6F5F2]/50">
           <span>© {new Date().getFullYear()} Swarajya Farm House — Ghera Sinhagad, Pune</span>
+          <span className="text-[#F6F5F2]/35">Made by <span className="text-[#C46549]/70">Nirvanaa Studios</span></span>
           <span>{BRAND.nameDevanagari}</span>
         </div>
       </div>
