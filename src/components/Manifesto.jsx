@@ -44,15 +44,6 @@ function ChapterCard({ ch, idx }) {
       ref={ref}
       className="relative grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-14 items-center py-6 md:py-12"
     >
-      {/* Background Watermark Number */}
-      <span
-        className={`absolute top-0 font-serif text-[120px] sm:text-[180px] md:text-[240px] font-bold select-none pointer-events-none text-[#1E3B2C]/[0.04] leading-none transition-all duration-1000 ${
-          flip ? "left-0 md:left-4" : "right-0 md:right-4"
-        }`}
-      >
-        {ch.number}
-      </span>
-
       {/* Image Side */}
       <motion.div
         initial={{ opacity: 0, y: 50, scale: 0.96 }}
@@ -87,10 +78,7 @@ function ChapterCard({ ch, idx }) {
 
           {/* Card Bottom Tagline */}
           <div className="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 z-20 flex items-center justify-between text-white/90">
-            <span className="text-[10px] uppercase tracking-[0.25em] font-semibold text-[#C46549] bg-black/40 px-2.5 py-1 rounded backdrop-blur-sm">
-              Chapter {ch.number}
-            </span>
-            <span className="text-xs font-serif italic text-white/75">
+            <span className="text-xs font-serif italic text-white/90">
               Swarajya Experience
             </span>
           </div>

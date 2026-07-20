@@ -67,8 +67,12 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.6 }}
-            className="flex items-center text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.2em] sm:tracking-[0.28em] text-white/70 mb-4 sm:mb-6 md:mb-8 relative z-10"
+            className="flex items-center gap-3 text-[9px] sm:text-[10px] md:text-xs uppercase tracking-[0.2em] sm:tracking-[0.28em] text-white/80 mb-4 sm:mb-6 md:mb-8 relative z-10"
           >
+            <span className="font-semibold text-[#FF6B00] text-base sm:text-lg md:text-xl font-sans normal-case tracking-normal">
+              स्वराज्य
+            </span>
+            <span className="h-3 w-px bg-white/30" />
             <span>Est. Ghera Sinhagad · Pune</span>
           </motion.div>
 
@@ -81,13 +85,13 @@ export default function Hero() {
                 className="block text-[11vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw]"
                 data-testid="hero-headline"
               >
-                <MaskedLine i={0}>Where the</MaskedLine>
+                <MaskedLine i={0}>Experience</MaskedLine>
               </span>
-              <span className="block text-[11vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw] italic text-[#C46549]">
-                <MaskedLine i={1}>Sahyadris</MaskedLine>
+              <span className="block text-[13vw] sm:text-[12vw] md:text-[9.5vw] lg:text-[8.5vw] font-bold text-[#FF6B00] font-sans tracking-wide drop-shadow-lg py-1">
+                <MaskedLine i={1}>स्वराज्य</MaskedLine>
               </span>
               <span className="block text-[11vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw]">
-                <MaskedLine i={2}>hold you still.</MaskedLine>
+                <MaskedLine i={2}>in the Sahyadris.</MaskedLine>
               </span>
             </motion.h1>
           </div>
