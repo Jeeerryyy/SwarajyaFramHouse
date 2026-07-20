@@ -47,13 +47,20 @@ export default function Navbar() {
       data-testid="site-navbar"
     >
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-10 py-3 sm:py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-baseline gap-1.5 sm:gap-2" data-testid="brand-logo">
-          <span className="font-serif text-xl sm:text-2xl md:text-3xl leading-none text-[#1E3B2C]">
-            Swarajya
-          </span>
-          <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[#5A6A61]">
-            Farm House
-          </span>
+        <Link to="/" className="flex items-center gap-2.5 group" data-testid="brand-logo">
+          <img
+            src="/logo.png"
+            alt="Swarajya Farm House & Resort Logo"
+            className="w-9 h-9 sm:w-11 sm:h-11 object-contain rounded-full border border-[#1E3B2C]/15 shadow-md group-hover:scale-105 transition-transform duration-300"
+          />
+          <div className="flex flex-col">
+            <span className="font-serif text-xl sm:text-2xl md:text-3xl leading-none text-[#1E3B2C]">
+              Swarajya
+            </span>
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.22em] sm:tracking-[0.28em] text-[#5A6A61] mt-0.5 font-medium">
+              Farm House & Resort
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-9">
